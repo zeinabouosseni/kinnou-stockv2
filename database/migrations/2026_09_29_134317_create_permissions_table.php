@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('permissions', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('employe_id')->unique()->constrained('employes')->onDelete('cascade');
+            $table->foreignId('employe_id')->unique()->constrained('employers')->onDelete('cascade');
             $table->boolean('enregistrer_ventes')->default(true);
             $table->boolean('voir_stock')->default(true);
             $table->boolean('gerer_depenses')->default(false);
